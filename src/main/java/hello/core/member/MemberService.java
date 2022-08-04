@@ -4,5 +4,5 @@ public interface MemberService {
 
     void join(Member member);
 
-    Member findByName(Long memberId);
+    Member findMember(Long memberId);
 }
