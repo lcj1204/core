@@ -11,6 +11,9 @@ public class MemberServiceTest {
 
     MemberService memberService;
 
+    /**
+     * @BeforeEach : 아래 @Test 마다 실행됨.
+     */
     @BeforeEach
     void beforeEach() {
         AppConfig appConfig = new AppConfig();

@@ -16,6 +16,9 @@ public class OrderServiceTest {
     MemberService memberService;
     OrderService orderService;
 
+    /**
+     * @BeforeEach : 아래 @Test 마다 실행됨.
+     */
     @BeforeEach
     void beforeEach() {
         AppConfig appConfig = new AppConfig();
