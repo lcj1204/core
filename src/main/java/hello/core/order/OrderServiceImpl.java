@@ -11,9 +11,14 @@ public class OrderServiceImpl implements OrderService{
     /**
      * 왜 private fianl 로 설정해야되나?
      */
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
     //private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
-    private DiscountPolicy discountPolicy; // final은 지워줘야댐. final 은 꼭 값이 할당되어야 하니까
+    private final DiscountPolicy discountPolicy; // final은 지워줘야댐. final 은 꼭 값이 할당되어야 하니까
+
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
