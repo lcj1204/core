@@ -10,7 +10,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RateDiscountPolicyTest {
 
-    DiscountPolicy discountPolicy = new RateDiscountPolicy();
+    /**
+     * RateDiscountPolicy 만 테스트 해볼거면 인터페이스 안써도됨
+     * DiscountPolicy discountPolicy = new RateDiscountPolicy();
+     */
+    RateDiscountPolicy discountPolicy = new RateDiscountPolicy();
 
     @Test
     void vip_o() {
